@@ -5,6 +5,7 @@ describe('funcionalidade: Login', () => {
   beforeEach(() => {
     cy.visit('minha-conta/')
   });
+  
   afterEach(() => {
    //cy.screenshot() 
   });
@@ -33,14 +34,19 @@ describe('funcionalidade: Login', () => {
         cy.get('.woocommerce-form > .button').click()
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, marcio.teste')
     });
-    it.only('Deve fazer login usando fixture', () => {
+    it('Deve fazer login usando fixture', () => {
       cy.fixture('perfil').then( dados => {
         cy.get('#username').type(dados.usuario, {log:false})
         cy.get('#password').type(dados.senha, {log:false})
         cy.get('.woocommerce-form > .button').click()
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, marcio.teste')
-      
-    });
-      
+    
+      });
+   });
+   
+   it.only('deve fazer login com sucesso usando comandos customizados', () => {
+      cy.login('marcio.teste@teste.com.br', 'teste@123')
+      cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, marcio.teste')
+
     });
 })
