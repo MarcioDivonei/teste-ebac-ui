@@ -1,0 +1,21 @@
+[
+    {
+        "nomeProduto": "Ariel Roll Sleeve Sweatshirt",
+        "tamanho": "M",
+        "cor": "Green",
+        "quantidade": 3
+    },
+    
+    {
+        "nomeProduto": "Atlas Fitness Tank",
+        "tamanho": "XS",
+        "cor": "Blue",
+        "quantidade": 5
+    },
+    {
+        "nomeProduto": "Arcadio Gym Short",
+        "tamanho": "33",
+        "cor": "Red",
+        "quantidade": 10
+    }
+]
